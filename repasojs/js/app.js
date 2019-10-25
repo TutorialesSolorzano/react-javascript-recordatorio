@@ -1,23 +1,24 @@
-// Template Strings
-const nombre = "Pieda";
-const trabajo = "Desarrollador";
+// Destructuring de objetos
 
-//Concatenar javascript
-console.log("Nombre: " + nombre + " trabajo: " + trabajo);
-console.log(`Nombre: ${nombre} trabajo: ${trabajo}`); //con backtips
+const aprendiendoJs = {
+    version: {
+        nueva: 'ES6',
+        anterior: 'ES5'
+    },
+    framaworks: ['React', 'VueJS', 'AngularJS']
+}
 
-//Concatenar varias lineas
+//Destrcturing es extraer valores de un objeto
 
-const contenedorApp = document.querySelector("#app");
+//console.log(aprendiendoJs);
 
-/* let html='<ul>'+
-'<li>Nombre: '+nombre+'</li>'+
-'<li>Trabajo: '+trabajo+'</li>'+
-'</ul>'; */
+// vaersion anterior
+/* let version = aprendiendoJs.version.nueva;
+let framework = aprendiendoJs.framaworks[1]; */
 
-let html = `<ul>
-         <li>Nombre: ${nombre}</li>
-        <li>Trabajo: ${trabajo}</li>
- </ul>`;
+//console.log(framework);
 
-contenedorApp.innerHTML = html;
+//version nueva
+
+let { version, framaworks } = aprendiendoJs;
+console.log(version);
